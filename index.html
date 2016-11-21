@@ -9,8 +9,12 @@
 	<body onload="init(null)" >
 		<h1>Twitch API result</h1>	
 		<div id="search">
-			<input id="name" type="text" name="name" placeholder="Search query...">
+			<input id="name" type="text" name="name" onclick="search()" placeholder="Search query...">
 			<button onclick="search()"> Search </button>
+			<p><small>(Note: Please use Chrome or Firefox browser.
+						Chrome and Firefox both implement the fetch function natively.
+						Need to config for Safari or IE)</small></p>
+
 		</div>
 		<div id="main">
 			<div id="result">
