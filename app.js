@@ -1,5 +1,4 @@
 function init(filter){
-
 	var request = new Request('https://api.twitch.tv/kraken/search/streams?q='+filter+'&', {
 		method: 'GET', 
 		headers: new Headers({
@@ -15,24 +14,22 @@ function init(filter){
 
         var len = res.streams.length;                         
         var container = document.getElementById("container");
-        console.log(res.streams[0])
+
         document.getElementById('totalResult').innerHTML = len;
 
-        for (var i = 0; i<len; i++) {
-            
+        for(var i=0; i<len; i++) {
             var logo = res.streams[i].channel.logo;
             var display_name = res.streams[i].channel.display_name;
             var game = res.streams[i].game;
             var viewers = res.streams[i].viewers;
 
-            // Create Each List item box
+            // Create each list item box
             createListItem(container, logo, display_name, game, viewers);
         } 
     });
 }	
 
 function createListItem(container, logo, display_name, game, viewers){
-
     return container.innerHTML +=  '<div class="parentBox"> '+
                                         '<div class="leftbox"> <img src="'+logo+'" class="img"> </div> '+
                                         '<div class="rightbox"> '+
@@ -42,9 +39,7 @@ function createListItem(container, logo, display_name, game, viewers){
                                     '</div>';
 }
 
-
 function search(){
-
     document.getElementById('container').innerHTML = null;
     document.getElementById('totalResult').innerHTML = null;
 

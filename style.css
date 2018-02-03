@@ -1,9 +1,9 @@
 body{
-	margin: 100px 200px 100px 200px;
+    margin: 100px 200px 100px 200px;
 }
 
 .parentBox{
-	margin-top:10px; 
+    margin-top:10px; 
 }
 
 .leftbox{
@@ -24,15 +24,15 @@ body{
 }
 
 #search, #main{
-	border-style: groove;
+    border-style: groove;
 }
 
 #search{
-	height: 50px;
-	padding-top: 40px;
-	padding-left: 20px;
+    height: 50px;
+    padding-top: 40px;
+    padding-left: 20px;
 }
 
 #container{
-	padding-left: 10px;
+    padding-left: 10px;
 }
