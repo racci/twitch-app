@@ -1,9 +1,9 @@
 function init(filter){
-	var request = new Request('https://api.twitch.tv/kraken/search/streams?q='+filter+'&', {
+    var request = new Request('https://api.twitch.tv/kraken/search/streams?q='+filter+'&', {
 		method: 'GET', 
 		headers: new Headers({
 			'Client-ID': '8vvrsoq4d0knl8z7wa9zik706uma105',
-            'Content-Type': 'application/json'
+                        'Content-Type': 'application/json'
 		})
 	});
 
